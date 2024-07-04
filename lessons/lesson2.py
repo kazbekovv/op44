@@ -61,3 +61,4 @@ print(anime.title,anime.author,anime.drive_image)
 anime.prise_book()
 print(Anime.mro())
 print(anime)
+
