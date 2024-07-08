@@ -1,2 +1,7 @@
 test.py
+
 .idea
+.vs
+
+__pycache__\
+
