@@ -20,3 +20,4 @@ git rm --cached namefile: рип файлов в репозитории
 
 git clone урл ссылка - скачивает проект из гит репозитория
 git remote remove origin - отвязывает проект от репозитория
+
