@@ -24,3 +24,6 @@ git remote remove origin - отвязывает проект от репозит
 git branch
 git branch name
 git checkout name
+
+git merge - сливает обновления из ветки
+которую вы указави в ветку в которой вы нахдитесь
