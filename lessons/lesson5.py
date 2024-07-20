@@ -14,14 +14,15 @@ from math import e,pi,sin,sqrt
 
 from lesson4_2 import Remanga
 import colorama
-print(colorama.Back.LIGHTYELLOW_EX,colorama.Fore.RED)
+print(colorama.Back.BLACK,colorama.Fore.RED)
 
 n=Remanga('огненный кулак')
 n.manga_upp()
 
 
+from art import tprint
+tprint('hello')
+
 # venv
 # внешние модули
 
-import colorama
-print('привет')
