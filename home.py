@@ -18,15 +18,6 @@ class BankAccount:
     def get_balance(self):
         return self.balance
 
-class SavingsAccount(BankAccount):
-    def __init__(self, account_number, owner, interest_rate, balance=0):
-        super().__init__(account_number, owner, balance)
-        self.interest_rate = interest_rate
-
-    def add_interest(self):
-        interest = self.balance * self.interest_rate
-        self.balance += interest
-        print(f"Interest added: {interest}. New balance: {self.balance}")
 
 class CheckingAccount(BankAccount):
     def __init__(self, account_number, owner, overdraft_limit, balance=0):
@@ -61,17 +52,14 @@ class Bank:
         return total
 
 # Создаем счета
-savings = SavingsAccount("SA12345", "Alice", 0.05, 1000)
 checking = CheckingAccount("CA54321", "Bob", 500, 200)
 
 # Создаем банк и добавляем счета
 bank = Bank("MyBank")
-bank.add_account(savings)
 bank.add_account(checking)
 
 # Действия с счетами
-savings.deposit(500)
-savings.add_interest()
+
 checking.withdraw(600)
 checking.deposit(300)
 
