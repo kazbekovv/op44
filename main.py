@@ -15,6 +15,8 @@ def mtime(func):
     return wrapper
 
 
+
+
 @mtime
 def comsum(n):
     total = sum(range(n))
