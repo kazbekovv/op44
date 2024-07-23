@@ -66,3 +66,25 @@ checking.deposit(300)
 # Выводим список счетов и общую сумму денег в банке
 bank.list_accounts()
 bank.total_funds()
+
+class SavingsAccount(BankAccount):
+    def __init__(self, account_number, owner, interest_rate, balance=0):
+        super().__init__(account_number, owner, balance)
+        self.interest_rate = interest_rate
+
+    def add_interest(self):
+        interest = self.balance * (self.interest_rate / 100)
+        self.balance += interest
+        print(f"Interest added. New balance: {self.balance}")
+
+savings = SavingsAccount("CA54321", "Bob", 500, 200)
+
+bank = Bank("MyBank")
+bank.add_account(checking)
+
+checking.withdraw(600)
+checking.deposit(300)
+
+bank.list_accounts()
+bank.total_funds()
+
